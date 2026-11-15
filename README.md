@@ -17,4 +17,4 @@ pytest
 3. На агенте должны быть `python3` и `pip`.
 4. Запусти Build — stages: **Setup** → **Test**.
 
-Результаты тестов появятся во вкладке **Test Result** (JUnit XML).
+Отчёт pytest сохраняется как артефакт `test-reports/results.xml` (плагин JUnit на сервере не установлен).
