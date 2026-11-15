@@ -16,24 +16,12 @@ pipeline {
             steps {
                 sh '''
                     . .venv/bin/activate
-                    pytest --junitxml=test-reports/results.xml
+                    pytest
                 '''
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'test-reports/results.xml,coverage.xml,htmlcov/**', allowEmptyArchive: true
-                }
-            }
-        }
-
-        stage('Docs') {
-            steps {
-                sh 'ls -la docs/'
-                echo 'Документация: docs/calculator.md'
-            }
-            post {
-                always {
-                    archiveArtifacts artifacts: 'docs/**', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'htmlcov/**', allowEmptyArchive: true
                 }
             }
         }

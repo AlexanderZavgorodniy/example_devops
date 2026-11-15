@@ -46,8 +46,4 @@ divide(10, 2)  # 5.0
 pytest
 ```
 
-Отчёты:
-
-- терминал — процент покрытия
-- `htmlcov/index.html` — HTML-отчёт
-- `coverage.xml` — XML для CI
+Отчёт: `htmlcov/index.html`
