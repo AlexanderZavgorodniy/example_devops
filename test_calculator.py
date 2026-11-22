@@ -7,6 +7,10 @@ from calculator import add, subtract, multiply, divide
 
 def test_add():
     assert add(2, 3) == 5
+    
+
+def test_add2():
+    assert add(12, 3) == 15
 
 
 def test_subtract():
